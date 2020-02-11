@@ -58,7 +58,22 @@ function twoStrings(sizeOfFont,id){
 }
 twoStrings('60px', 'lines');
 
+function words (text){
+  const ele = document.createElement('li')
+  imgAdder(ele)
+  return ele.innerText = text
+}
+words ('hello world, this is a function inside a function');
 
+function head (headSize, words){
+  const newHeader = document.createElement('h3')
+  imgAdder(newHeader)
+  newHeader.style.fontSize = headSize
+  newHeader.innerText = words
+  return newHeader
+}
+
+head('50px', 'Finally Done with this ----');
 
 
 
