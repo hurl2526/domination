@@ -12,9 +12,51 @@ function slash (){
   return document.querySelector('#lines'
   ).style.textDecoration = 'line-through'
 }
-slash();  
+slash(); 
 
+// Get the <ul> element with id="myList"
+function removal(){
+  let list = document.querySelector('#arguments')
+// // list.remove() 
+// //   }
+//   while (list.hasChildNodes()) {  
+//     list.removeChild(list.lastElementChild);
+//   }
+  if (list.hasChildNodes()) {
+    list.removeChild(list.lastElementChild)
+  }
+}
+removal();
+removal();
 
+function imgAdder(element){
+document.querySelector('#arguments').appendChild(element);
+}
+
+const image = document.createElement('img');
+
+image.src = 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmedia.giphy.com%2Fmedia%2F37tuh92v7fylxXhd4A%2Fgiphy.gif&f=1&nofb=1'
+
+imgAdder(image);
+
+function bigImage(imageElement){
+const pic = document.querySelector(imageElement)
+return pic.style.height = '30px'
+}
+bigImage('#image-2');
+
+function makeClass (element){
+  const anyElement = document.querySelector(element)
+  return anyElement.classList.add("invisible")
+}
+makeClass ('#p1');
+
+function twoStrings(sizeOfFont,id){
+  const target = document.querySelector('#' + id)
+  return target.style.fontSize = sizeOfFont;
+
+}
+twoStrings('60px', 'lines');
 
 
 
